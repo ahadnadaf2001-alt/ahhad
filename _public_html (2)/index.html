@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="DemandGenius Media - B2B Research & White Papers">
+    <meta property="og:description" content="DemandGenius Media — B2B research, white papers and market insights.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Image/demo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DemandGenius Media">
+    <meta name="twitter:description" content="B2B research, white papers and market insights.">
+    <meta name="twitter:image" content="Image/demo.jpg">
+    <meta name="description" content="DemandGenius Media — B2B research, white papers and market insights." />
+    
+    <title>DemandGenius Media - B2B Research & White Papers</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* ═══════════════════════════════════════════════════════════
+           HERO BANNER SECTION
+           ═══════════════════════════════════════════════════════════ */
+
+        .hero-banner {
+            background: linear-gradient(135deg, #0f1f2e 0%, #1a3a52 50%, #2d5a7b 100%);
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .hero-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(150px, -150px);
+        }
+
+        .hero-banner::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(-150px, 100px);
+        }
+
+        .hero-banner-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.8rem;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+            animation: slideInDown 0.6s ease-out;
+        }
+
+        .hero-title {
+            color: white;
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 0 0 1rem;
+            letter-spacing: -0.02em;
+            animation: slideInUp 0.8s ease-out 0.1s backwards;
+        }
+
+        .hero-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin: 0 0 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: slideInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .hero-cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideInUp 0.8s ease-out 0.3s backwards;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            transition: all 0.25s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #f59e0b;
+            color: #f59e0b;
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           FEATURED CAROUSEL SECTION
+           ═══════════════════════════════════════════════════════════ */
+
+        .featured-carousel {
+            max-width: 1200px;
+            margin: -3rem auto 3rem;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .carousel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .carousel-card {
+            background: var(--surface-color);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s;
+            height: 200px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .carousel-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .carousel-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .carousel-card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            color: white;
+        }
+
+        .carousel-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            width: fit-content;
+        }
+
+        .carousel-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           SECTION HEADERS
+           ═══════════════════════════════════════════════════════════ */
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 3px solid var(--border-color);
+        }
+
+        .section-header-icon {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+
+        .section-header h2 {
+            margin: 0;
+            font-size: 2rem;
+            color: var(--primary-dark);
+        }
+
+        .section-header-subtitle {
+            margin-left: auto;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           NEW REPORTS SECTION
+           ═══════════════════════════════════════════════════════════ */
+
+        .section-new-reports {
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .container-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .new-reports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .report-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .report-card:hover {
+            box-shadow: var(--shadow-xl);
+            transform: translateY(-8px);
+            border-color: var(--accent-color);
+        }
+
+        .report-image {
+            height: 180px;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--border-light), var(--border-color));
+        }
+
+        .report-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .report-card:hover .report-image img {
+            transform: scale(1.1) rotate(2deg);
+        }
+
+        .report-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .report-category {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+            color: white;
+            font-weight: 700;
+            font-size: 0.7rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            width: fit-content;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .report-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .report-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            flex: 1;
+            line-height: 1.6;
+        }
+
+        .report-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-light);
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .report-date {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .read-more {
+            color: var(--accent-color);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .read-more:hover {
+            gap: 0.5rem;
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           EXPLORE MORE SECTION
+           ═══════════════════════════════════════════════════════════ */
+
+        .section-explore {
+            background: linear-gradient(135deg, #1a3a52 0%, #0f1f2e 100%);
+            padding: 4rem 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-explore::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .section-explore-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .explore-header h2 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .explore-header-icon {
+            color: var(--accent-color);
+        }
+
+        .explore-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .explore-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .explore-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--accent-color);
+            transform: translateY(-6px);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
+        }
+
+        .explore-image {
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .explore-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .explore-card:hover .explore-image img {
+            transform: scale(1.1);
+        }
+
+        .explore-content {
+            padding: 1.5rem;
+        }
+
+        .explore-badge {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .explore-tag {
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+            color: white;
+            font-weight: 600;
+            font-size: 0.7rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .explore-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .explore-description {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           ANIMATIONS
+           ═══════════════════════════════════════════════════════════ */
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           RESPONSIVE DESIGN
+           ═══════════════════════════════════════════════════════════ */
+
+        @media (max-width: 1200px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-cta-buttons {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-banner {
+                padding: 3rem 2rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .btn-primary, .btn-secondary {
+                padding: 0.8rem 2rem;
+                font-size: 0.9rem;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .section-header-subtitle {
+                margin-left: 0;
+            }
+
+            .carousel-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-banner {
+                padding: 2rem 1rem;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .hero-cta-buttons {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                padding: 0.8rem 1.5rem;
+            }
+
+            .carousel-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-carousel {
+                margin: -2rem auto 2rem;
+                padding: 0 1rem;
+            }
+
+            .new-reports-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .explore-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container-section {
+                padding: 0 1rem;
+            }
+
+            .section-explore-content {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+   <header class="header">
+    <div class="logo">
+        <a href="index.html">
+            <img src="Image/LGM_Logo-removebg-preview.png" alt="LGM Logo" class="header-logo-img">
+        </a>
+    </div>
+    
+    <div class="nav-right">
+        <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Toggle Navigation">
+            ☰
+        </button>
+        
+        <nav class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="terms.html">Policy</a>
+        </nav>
+        
+        <button class="search-icon-btn" aria-label="Search">
+            🔍
+        </button>
+    </div>
+</header>
+
+<div class="search-dropdown" id="search-dropdown">
+    <div class="search-container-wrapper container">
+        <form class="search-form-full">
+            <input type="search" id="search-input" class="search-input" placeholder="Search our reports and insights..." required>
+            <button type="submit" class="full-search-btn" aria-label="Search">
+                <span class="search-magnifier">🔍</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<main>
+    <!-- ═══════════════════════════════════════════════════════════
+         HERO BANNER SECTION
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="hero-banner">
+        <div class="hero-banner-content">
+            <div class="hero-badge">
+                <span>⚡</span>
+                <span>Premium B2B Research</span>
+            </div>
+
+            <h1 class="hero-title">Transform Your Business with Insights</h1>
+
+            <p class="hero-subtitle">
+                Access cutting-edge white papers, research reports, and market insights from industry experts. Make data-driven decisions today.
+            </p>
+
+            <div class="hero-cta-buttons">
+                <button class="btn-primary" onclick="document.querySelector('.section-new-reports').scrollIntoView({behavior: 'smooth'})">
+                    📚 Browse Reports
+                </button>
+                <button class="btn-secondary" onclick="document.querySelector('.section-explore').scrollIntoView({behavior: 'smooth'})">
+                    ✨ Explore More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         FEATURED CAROUSEL
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="featured-carousel">
+        <div class="carousel-grid">
+            <a href="ai.html" class="carousel-card">
+                <img src="Image/demo.jpg" alt="Featured Report 1">
+                <div class="carousel-card-overlay">
+                    <div class="carousel-badge">FEATURED</div>
+                    <h3 class="carousel-title">Scaling AI You Can Trust</h3>
+                </div>
+            </a>
+            
+            <a href="categories.html" class="carousel-card">
+                <img src="Image/demo.jpg" alt="Featured Report 2">
+                <div class="carousel-card-overlay">
+                    <div class="carousel-badge">POPULAR</div>
+                    <h3 class="carousel-title">State of Cyber Security 2025</h3>
+                </div>
+            </a>
+            
+            <a href="categories.html" class="carousel-card">
+                <img src="Image/demo.jpg" alt="Featured Report 3">
+                <div class="carousel-card-overlay">
+                    <div class="carousel-badge">TRENDING</div>
+                    <h3 class="carousel-title">Cloud Migration Guide</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         NEW REPORTS SECTION
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="section-new-reports">
+        <div class="container-section">
+            <div class="section-header">
+                <span class="section-header-icon">📰</span>
+                <h2>New Reports</h2>
+                <span class="section-header-subtitle">Latest insights updated weekly</span>
+            </div>
+
+            <div class="new-reports-grid">
+                <!-- Report 1 -->
+                <a href="AI-Article/Scaling-AI-You-Can-Trust.html" class="report-card" style="text-decoration: none; color: inherit;">
+                    <div class="report-image">
+                        <img src="Image/demo.jpg" alt="Scaling AI You Can Trust">
+                    </div>
+                    <div class="report-content">
+                        <span class="report-category">🤖 AI & Automation</span>
+                        <h3 class="report-title">Scaling AI You Can Trust</h3>
+                        <p class="report-description">
+                            A comprehensive report on transforming operations and performance with responsible AI models.
+                        </p>
+                        <div class="report-meta">
+                            <span class="report-date">📅 Nov 14, 2025</span>
+                            <span class="read-more">Read →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Report 2 -->
+                <a href="#" class="report-card" style="text-decoration: none; color: inherit;">
+                    <div class="report-image">
+                        <img src="Image/demo.jpg" alt="Cyber Security 2025">
+                    </div>
+                    <div class="report-content">
+                        <span class="report-category">🔒 Cyber Security</span>
+                        <h3 class="report-title">The State of Cyber Security 2025</h3>
+                        <p class="report-description">
+                            Essential checklist for C-Suites to navigate risk management in the hybrid work era.
+                        </p>
+                        <div class="report-meta">
+                            <span class="report-date">📅 Oct 28, 2025</span>
+                            <span class="read-more">Read →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Report 3 -->
+                <a href="#" class="report-card" style="text-decoration: none; color: inherit;">
+                    <div class="report-image">
+                        <img src="Image/demo.jpg" alt="Cloud Migration Guide">
+                    </div>
+                    <div class="report-content">
+                        <span class="report-category">☁️ Cloud Computing</span>
+                        <h3 class="report-title">Cloud Migration Guide</h3>
+                        <p class="report-description">
+                            Strategic steps for building and optimizing your presence in the cloud.
+                        </p>
+                        <div class="report-meta">
+                            <span class="report-date">📅 Sep 01, 2025</span>
+                            <span class="read-more">Read →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Report 4 -->
+                <a href="#" class="report-card" style="text-decoration: none; color: inherit;">
+                    <div class="report-image">
+                        <img src="Image/demo.jpg" alt="RPA vs Cognitive Automation">
+                    </div>
+                    <div class="report-content">
+                        <span class="report-category">⚙️ Automation</span>
+                        <h3 class="report-title">RPA vs. Cognitive Automation</h3>
+                        <p class="report-description">
+                            An essential comparison guide to help C-Suites select the ideal automation strategy.
+                        </p>
+                        <div class="report-meta">
+                            <span class="report-date">📅 Oct 05, 2025</span>
+                            <span class="read-more">Read →</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         EXPLORE MORE SECTION
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="section-explore">
+        <div class="section-explore-content">
+            <div class="explore-header section-header" style="border-bottom-color: rgba(255, 255, 255, 0.2); color: white;">
+                <span class="explore-header-icon section-header-icon" style="color: var(--accent-color);">✨</span>
+                <h2 style="color: white;">Explore More</h2>
+                <span class="section-header-subtitle" style="color: rgba(255, 255, 255, 0.7);">Discover webinars & case studies</span>
+            </div>
+
+            <div class="explore-grid">
+                <!-- Explore 1 -->
+                <a href="#" class="explore-card" style="text-decoration: none; color: inherit;">
+                    <div class="explore-image">
+                        <img src="Image/demo.jpg" alt="Modernizing Networking">
+                    </div>
+                    <div class="explore-content">
+                        <div class="explore-badge">
+                            <span class="explore-tag">Cyber Security</span>
+                            <span class="explore-tag">Webinar</span>
+                        </div>
+                        <h3 class="explore-title">Modernizing Networking and Security</h3>
+                        <p class="explore-description">
+                            Insights for customers on hybrid work era security challenges and solutions.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Explore 2 -->
+                <a href="#" class="explore-card" style="text-decoration: none; color: inherit;">
+                    <div class="explore-image">
+                        <img src="Image/demo.jpg" alt="Security with AI">
+                    </div>
+                    <div class="explore-content">
+                        <div class="explore-badge">
+                            <span class="explore-tag">Cyber Security</span>
+                            <span class="explore-tag">Case Study</span>
+                        </div>
+                        <h3 class="explore-title">Transforming Security with AI</h3>
+                        <p class="explore-description">
+                            How organizations leverage AI to enhance their security posture effectively.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Explore 3 -->
+                <a href="#" class="explore-card" style="text-decoration: none; color: inherit;">
+                    <div class="explore-image">
+                        <img src="Image/demo.jpg" alt="Predictive Analytics">
+                    </div>
+                    <div class="explore-content">
+                        <div class="explore-badge">
+                            <span class="explore-tag">AI & Analytics</span>
+                            <span class="explore-tag">Webinar</span>
+                        </div>
+                        <h3 class="explore-title">Uncovering Predictive Insights with Analytics + AI</h3>
+                        <p class="explore-description">
+                            Learn how to leverage predictive analytics for better business outcomes.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Explore 4 -->
+                <a href="#" class="explore-card" style="text-decoration: none; color: inherit;">
+                    <div class="explore-image">
+                        <img src="Image/demo.jpg" alt="ERP Solutions">
+                    </div>
+                    <div class="explore-content">
+                        <div class="explore-badge">
+                            <span class="explore-tag">Business</span>
+                            <span class="explore-tag">Webinar</span>
+                        </div>
+                        <h3 class="explore-title">Modern ERP Solutions Guide</h3>
+                        <p class="explore-description">
+                            Comprehensive guide to implementing modern ERP systems in your organization.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container footer-content">
+        <div class="footer-col footer-info">
+            <div class="logo footer-logo">
+                <a href="index.html">
+                    <img src="Image/LGM_Logo-removebg-preview.png" alt="LGM Logo" class="footer-logo-img">
+                </a>
+            </div>
+            <p>- DemandGenius Media is a cutting-edge lead generation organization that specializes in B2B research and white papers. Our web platform as a hub for businesses to access valuable insights and information to drive growth and success. <br>
+            - By hosting extensive research reports and white papers, DemandGenius Media is able to provide a wealth of knowledge and resources to its users, helping them stay ahead of the curve in their respective industries.<br> 
+            - With a focus on providing high-quality, actionable information, DemandGenius Media is quickly becoming a go-to source for businesses looking to generate leads and drive their businesses forward.</p>
+            
+            <p class="copyright">&copy; 2025 All rights reserved by DemandGenius Media <br> Design & Develop by <a href="https://www.vrsmleadmag.com/">VRMS LeadMagnet</a></p>
+        </div>
+        
+        <div class="footer-col footer-links-col">
+            <h4>Top Categories</h4>
+            <ul>
+                <li><a href="ai.html">Artificial Intelligence (AI)</a></li>
+                <li><a href="categories.html#cyber">Cyber Security</a></li>
+                <li><a href="categories.html#cloud">Cloud Computing</a></li>
+                <li><a href="categories.html#biz">Business & Finance</a></li>
+                <li class="separator"><a href="terms.html">Our Policy & Terms of Use</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-col footer-form-col">
+            <h4>Get Updated</h4>
+            <p>Receive our latest reports and market insights directly to your inbox.</p>
+            <form class="footer-contact-form" action="#" method="POST">
+                <input type="email" name="email" placeholder="Your Email Address" required>
+                <button type="submit" class="cta-button">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

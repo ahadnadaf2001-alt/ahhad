@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Artificial Intelligence (AI) - LeadGenOne">
+    <meta property="og:description" content="DemandGenius Media — B2B research, white papers and market insights.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Image/demo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Artificial Intelligence (AI) - LeadGenOne">
+    <meta name="twitter:description" content="DemandGenius Media — B2B research, white papers and market insights.">
+    <meta name="twitter:image" content="Image/demo.jpg">
+    <meta name="description" content="DemandGenius Media — B2B research, white papers and market insights." />
+    
+    <title>Artificial Intelligence (AI) - LeadGenOne</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Fix gap between header and hero section */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Enhanced Category Hero - NO BOTTOM MARGIN */
+        .category-hero-enhanced {
+            background: linear-gradient(135deg, #0f1f2e 0%, #1a3a52 50%, #2d5a7b 100%);
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+            margin: 0;  /* ✅ FIX: Remove margin */
+            margin-bottom: 0;  /* ✅ FIX: Remove bottom margin */
+        }
+
+        .category-hero-enhanced::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(100px, -100px);
+        }
+
+        .category-hero-enhanced::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(-100px, 50px);
+        }
+
+        .category-hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .category-badge-large {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.8rem;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+            animation: slideInDown 0.6s ease-out;
+        }
+
+        .category-hero-content h1 {
+            color: white;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            animation: slideInUp 0.8s ease-out 0.1s backwards;
+        }
+
+        .category-hero-subtitle {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.15rem;
+            margin-top: 1rem;
+            margin-bottom: 0;
+            font-weight: 400;
+            animation: slideInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .category-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            animation: slideInUp 0.8s ease-out 0.3s backwards;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .stat-icon {
+            font-size: 1.5rem;
+            color: #f59e0b;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        /* ✅ FIX: Remove margin from container after hero */
+        .container {
+            margin-top: 0 !important;
+            padding-top: 3rem;
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .category-hero-enhanced {
+                padding: 3rem 2rem;
+            }
+
+            .category-hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .category-hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .category-stats {
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .category-hero-enhanced {
+                padding: 2rem 1rem;
+            }
+
+            .category-hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .category-hero-subtitle {
+                font-size: 0.9rem;
+                margin-top: 0.5rem;
+            }
+
+            .category-badge-large {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.7rem;
+                margin-bottom: 1rem;
+            }
+
+            .category-stats {
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                margin-top: 1rem;
+            }
+
+            .stat-number {
+                font-size: 1.2rem;
+            }
+
+            .stat-label {
+                font-size: 0.8rem;
+            }
+
+            .category-hero-enhanced::before {
+                display: none;
+            }
+
+            .category-hero-enhanced::after {
+                width: 150px;
+                height: 150px;
+                transform: translate(-60px, 30px);
+            }
+
+            .container {
+                padding-top: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="Image/LGM_Logo-removebg-preview.png" alt="LGM Logo" class="header-logo-img">
+            </a>
+        </div>
+        
+        <div class="nav-right">
+            <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Toggle Navigation">
+                ☰
+            </button>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="categories.html">Categories</a>
+                <a href="terms.html">Policy</a>
+            </nav>
+            
+            <button class="search-icon-btn" aria-label="Search">
+                🔍
+            </button>
+        </div>
+    </header>
+
+    <div class="search-dropdown" id="search-dropdown">
+        <div class="search-container-wrapper container">
+            <form class="search-form-full">
+                <input type="search" id="search-input" class="search-input" placeholder="Search our reports and insights..." required>
+                <button type="submit" class="full-search-btn" aria-label="Search">
+                    <span class="search-magnifier">🔍</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <!-- ENHANCED CATEGORY HERO HEADER -->
+        <section class="category-hero-enhanced">
+            <div class="category-hero-content">
+                <div class="category-badge-large">
+                    <span>🤖</span>
+                    <span>Artificial Intelligence</span>
+                </div>
+                
+                <h1>Artificial Intelligence (AI)</h1>
+                
+                <p class="category-hero-subtitle">
+                    Explore cutting-edge research, white papers, and market insights on AI, machine learning, automation, and robotics.
+                </p>
+
+                <div class="category-stats">
+                    <div class="stat-item">
+                        <span class="stat-icon">📄</span>
+                        <div>
+                            <div class="stat-number">92</div>
+                            <div class="stat-label">Reports</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">🏢</span>
+                        <div>
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Companies</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">👥</span>
+                        <div>
+                            <div class="stat-number">10K+</div>
+                            <div class="stat-label">Readers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <h2>Latest AI Reports (3 Results)</h2>
+            <section class="card-list">
+                
+                <a href="../AI Article/Scaling AI You Can Trust.html" class="card article-card-link">
+                    <div class="article-image-wrapper">
+                        <img src="Image/demo.jpg" alt="Abstract image representing AI and automation" class="article-image">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-category">MACHINE LEARNING</p>
+                        <h3 class="article-title">Scaling AI You Can Trust</h3>
+                        <p class="article-excerpt">A comprehensive report on transforming operations and performance with responsible AI models.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Nov 14, 2025</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Add this card to the card-list in ai.html -->
+                <a href="AI Article/How-to-Champion-AI-as-an-Executive/index.html" class="card article-card-link">
+                    <div class="article-image-wrapper">
+                        <img src="Image/demo.jpg" alt="How to Champion AI as an Executive" class="article-image">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-category">AI STRATEGY</p>
+                        <h3 class="article-title">How to Champion AI as an Executive</h3>
+                        <p class="article-excerpt">Strategic guide to leading AI transformation and building organizational capabilities for enterprise success.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Nov 15, 2025</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="#" class="card article-card-link">
+                    <div class="article-image-wrapper">
+                        <img src="Image/demo.jpg" alt="Image representing robotic process automation" class="article-image">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-category">AUTOMATION</p>
+                        <h3 class="article-title">RPA vs. Cognitive Automation: Which is Right for Your Business?</h3>
+                        <p class="article-excerpt">An essential comparison guide to help C-Suites select the ideal automation strategy for efficiency gains.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Oct 05, 2025</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="#" class="card article-card-link">
+                    <div class="article-image-wrapper">
+                        <img src="Image/demo.jpg" alt="Image of a code editor with AI assistance" class="article-image">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-category">SOFTWARE DEVELOPMENT</p>
+                        <h3 class="article-title">The Future of Code: Generative AI in Web Development</h3>
+                        <p class="article-excerpt">How large language models and generative AI are accelerating development cycles and changing developer roles.</p>
+                        <div class="article-meta">
+                            <span class="article-date">Sep 20, 2025</span>
+                        </div>
+                    </div>
+                </a>
+                
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col footer-info">
+                <div class="logo footer-logo">
+                    <a href="index.html">
+                        <img src="Image/LGM_Logo-removebg-preview.png" alt="LGM Logo" class="footer-logo-img">
+                    </a>
+                </div>
+                <p>- DemandGenius Media is a cutting-edge lead generation organization that specializes in B2B research and white papers. Our web platform as a hub for businesses to access valuable insights and information to drive growth and success. <br>
+                - By hosting extensive research reports and white papers, DemandGenius Media is able to provide a wealth of knowledge and resources to its users, helping them stay ahead of the curve in their respective industries.<br> 
+                - With a focus on providing high-quality, actionable information, DemandGenius Media is quickly becoming a go-to source for businesses looking to generate leads and drive their businesses forward.</p>
+                
+                <p class="copyright">&copy; 2025 All rights reserved by DemandGenius Media <br> Design & Develop by <a href="https://www.vrsmleadmag.com/">VRMS LeadMagnet</a></p>
+            </div>
+            
+            <div class="footer-col footer-links-col">
+                <h4>Top Categories</h4>
+                <ul>
+                    <li><a href="ai.html">Artificial Intelligence (AI)</a></li>
+                    <li><a href="categories.html#cyber">Cyber Security</a></li>
+                    <li><a href="categories.html#cloud">Cloud Computing</a></li>
+                    <li><a href="categories.html#biz">Business & Finance</a></li>
+                    <li class="separator"><a href="terms.html">Our Policy & Terms of Use</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col footer-form-col">
+                <h4>Get Updated</h4>
+                <p>Receive our latest reports and market insights directly to your inbox.</p>
+                <form class="footer-contact-form" action="#" method="POST">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="cta-button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

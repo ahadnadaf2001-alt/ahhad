@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Terms and Privacy Policy - DemandGenius Media">
+    <meta property="og:description" content="DemandGenius Media — B2B research, white papers and market insights.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Image/demo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Terms and Privacy Policy - DemandGenius Media">
+    <meta name="twitter:description" content="DemandGenius Media — B2B research, white papers and market insights.">
+    <meta name="twitter:image" content="Image/demo.jpg">
+    <meta name="description" content="DemandGenius Media — B2B research, white papers and market insights." />
+    
+    <title>Terms and Privacy Policy - DemandGenius Media</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* ═══════════════════════════════════════════════════════════
+           TERMS HERO BANNER
+           ═══════════════════════════════════════════════════════════ */
+
+        .terms-hero-banner {
+            background: linear-gradient(135deg, #0f1f2e 0%, #1a3a52 50%, #2d5a7b 100%);
+            padding: 4rem 2rem 3rem;
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .terms-hero-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(100px, -100px);
+        }
+
+        .terms-hero-banner::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(-100px, 50px);
+        }
+
+        .terms-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .terms-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.75rem;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+            animation: slideInDown 0.6s ease-out;
+        }
+
+        .terms-hero-title {
+            color: white;
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 0 0 1rem;
+            letter-spacing: -0.02em;
+            animation: slideInUp 0.8s ease-out 0.1s backwards;
+        }
+
+        .terms-hero-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 0;
+            font-weight: 400;
+            animation: slideInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           TERMS CONTENT LAYOUT
+           ═══════════════════════════════════════════════════════════ */
+
+        .terms-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        /* SIDEBAR - TABLE OF CONTENTS */
+        .terms-sidebar {
+            position: sticky;
+            top: 110px;
+        }
+
+        .toc-card {
+            background: var(--surface-color);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s;
+        }
+
+        .toc-card:hover {
+            border-color: var(--accent-color);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .toc-card h4 {
+            color: var(--primary-dark);
+            margin: 0 0 1.5rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.8rem;
+            padding: 0;
+            border: none;
+        }
+
+        .toc-list a {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 0.4rem;
+        }
+
+        .toc-list a:hover {
+            color: var(--accent-color);
+            background: var(--border-light);
+            padding-left: 1rem;
+        }
+
+        /* MAIN CONTENT */
+        .terms-main {
+            background: var(--surface-color);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .terms-main h2 {
+            color: var(--primary-dark);
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+            scroll-margin-top: 120px;
+        }
+
+        .terms-main h2:first-child {
+            margin-top: 0;
+        }
+
+        .terms-main h2::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(to right, var(--accent-color), var(--accent-light));
+            border-radius: 2px;
+        }
+
+        .terms-main h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .terms-main p {
+            color: var(--text-color);
+            line-height: 1.85;
+            margin-bottom: 1.5rem;
+        }
+
+        .terms-main ul {
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .terms-main li {
+            margin-bottom: 0.8rem;
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        .terms-main strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        .terms-main a {
+            color: var(--accent-color);
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .terms-main a:hover {
+            color: var(--accent-dark);
+        }
+
+        /* HIGHLIGHT BOX */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.05) 100%);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box strong {
+            color: var(--accent-color);
+        }
+
+        /* LAST UPDATED */
+        .last-updated {
+            background: linear-gradient(135deg, var(--border-light) 0%, transparent 100%);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .last-updated strong {
+            color: var(--primary-dark);
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           INFO CARDS SECTION
+           ═══════════════════════════════════════════════════════════ */
+
+        .terms-info-section {
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+            padding: 3rem 2rem;
+            margin-top: 3rem;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .info-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .info-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: var(--surface-color);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s;
+        }
+
+        .info-card:hover {
+            border-color: var(--accent-color);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .info-card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-card h4 {
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .info-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           ANIMATIONS
+           ═══════════════════════════════════════════════════════════ */
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           RESPONSIVE DESIGN
+           ═══════════════════════════════════════════════════════════ */
+
+        @media (max-width: 992px) {
+            .terms-hero-banner {
+                padding: 3rem 2rem 2rem;
+            }
+
+            .terms-hero-title {
+                font-size: 2.2rem;
+            }
+
+            .terms-hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .terms-container {
+                grid-template-columns: 1fr;
+                padding: 2rem 1.5rem;
+            }
+
+            .terms-sidebar {
+                position: relative;
+                top: 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .terms-hero-banner {
+                padding: 2rem 1rem;
+            }
+
+            .terms-hero-title {
+                font-size: 1.6rem;
+            }
+
+            .terms-hero-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .terms-badge {
+                padding: 0.5rem 1rem;
+                font-size: 0.65rem;
+            }
+
+            .terms-container {
+                padding: 1.5rem 1rem;
+            }
+
+            .terms-main {
+                padding: 1.5rem;
+            }
+
+            .terms-main h2 {
+                font-size: 1.4rem;
+            }
+
+            .terms-main h3 {
+                font-size: 1.1rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .terms-info-section {
+                padding: 2rem 1rem;
+            }
+
+            .terms-hero-banner::before {
+                display: none;
+            }
+
+            .terms-hero-banner::after {
+                width: 150px;
+                height: 150px;
+                transform: translate(-60px, 30px);
+            }
+
+            .toc-card {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="Image/LGM_Logo-removebg-preview.png" alt="LGM Logo" class="header-logo-img">
+            </a>
+        </div>
+        
+        <div class="nav-right">
+            <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Toggle Navigation">
+                ☰
+            </button>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="categories.html">Categories</a>
+                <a href="terms.html">Policy</a>
+            </nav>
+            
+            <button class="search-icon-btn" aria-label="Search">
+                🔍
+            </button>
+        </div>
+    </header>
+
+    <div class="search-dropdown" id="search-dropdown">
+        <div class="search-container-wrapper container">
+            <form class="search-form-full">
+                <input type="search" id="search-input" class="search-input" placeholder="Search our reports and insights..." required>
+                <button type="submit" class="full-search-btn" aria-label="Search">
+                    <span class="search-magnifier">🔍</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        
+        <!-- ═══════════════════════════════════════════════════════════
+             TERMS HERO BANNER
+             ═══════════════════════════════════════════════════════════ -->
+        <section class="terms-hero-banner">
+            <div class="terms-hero-content">
+                <div class="terms-badge">
+                    <span>⚖️</span>
+                    <span>Legal & Privacy</span>
+                </div>
+
+                <h1 class="terms-hero-title">Terms of Service & Privacy Policy</h1>
+
+                <p class="terms-hero-subtitle">
+                    Your privacy and data security are our top priorities. Learn how we protect your information and what you can expect from us.
+                </p>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             TERMS CONTENT
+             ═══════════════════════════════════════════════════════════ -->
+        <div class="terms-container">
+            
+            <!-- SIDEBAR - TABLE OF CONTENTS -->
+            <aside class="terms-sidebar">
+                <div class="toc-card">
+                    <h4>📑 Contents</h4>
+                    <ul class="toc-list">
+                        <li><a href="#privacy-overview">Privacy Overview</a></li>
+                        <li><a href="#information-collect">Information We Collect</a></li>
+                        <li><a href="#use-information">Use of Information</a></li>
+                        <li><a href="#sharing-information">Sharing Information</a></li>
+                        <li><a href="#email-opt-out">Email Opt-Out</a></li>
+                        <li><a href="#third-party-sites">Third Party Sites</a></li>
+                        <li><a href="#policy-updates">Policy Updates</a></li>
+                        <li><a href="#jurisdiction">Jurisdiction</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <article class="terms-main">
+
+                <div id="privacy-overview">
+                    <h2>Privacy Policy Overview</h2>
+                    
+                    <p><strong>This Privacy Policy applies to all users, readers & viewers of www.demandgeniusmedia.com</strong></p>
+                    
+                    <p>DemandGenius Media recognizes the importance of maintaining your privacy. We value your privacy and appreciate your trust in us. This Policy describes how we treat user information we collect and other offline sources. This Privacy Policy applies to current and former visitors to our website and to our online clients.</p>
+                    
+                    <div class="highlight-box">
+                        <strong>📌 Important:</strong> By visiting and/or using our website, you agree to this Privacy Policy. If you do not agree, please do not use our services.
+                    </div>
+                </div>
+
+                <div id="information-collect">
+                    <h2>Information We Collect</h2>
+                    
+                    <h3>Direct Information Collection</h3>
+                    <p>We collect information directly from you when you interact with our website and services:</p>
+                    <ul>
+                        <li>Name, email, mobile number, and phone number</li>
+                        <li>Street address, city, state, pin code, and country</li>
+                        <li>Business name and location information</li>
+                        <li>IP address and browser information</li>
+                        <li>Device type and operating system version</li>
+                    </ul>
+
+                    <h3>Automatic Information Collection</h3>
+                    <p>We automatically collect certain information when you use our website:</p>
+                    <ul>
+                        <li>Website referrer information and pages visited</li>
+                        <li>Time spent on our website and user preferences</li>
+                        <li>Mobile device type and operating system</li>
+                        <li>Geographic location data</li>
+                        <li>Browser cookies and tracking identifiers</li>
+                    </ul>
+
+                    <h3>Information from Third Parties</h3>
+                    <p>We may receive information about you from:</p>
+                    <ul>
+                        <li>Social media profiles and public data</li>
+                        <li>Business partners and data providers</li>
+                        <li>Comments posted on our website</li>
+                        <li>Questions submitted through contact forms</li>
+                    </ul>
+                </div>
+
+                <div id="use-information">
+                    <h2>Use of Your Personal Information</h2>
+                    
+                    <p>We use your information for the following purposes:</p>
+                    <ul>
+                        <li><strong>Statistical Analysis:</strong> Understanding usage patterns and user behavior</li>
+                        <li><strong>Customer Support:</strong> Responding to your requests and confirming registrations</li>
+                        <li><strong>Personalization:</strong> Customizing your experience based on preferences</li>
+                        <li><strong>Improvements:</strong> Making our website better based on trends and feedback</li>
+                        <li><strong>Security:</strong> Protecting against fraud and unauthorized access</li>
+                        <li><strong>Marketing:</strong> Sending information about special promotions and new features</li>
+                        <li><strong>Transactional Communication:</strong> Important updates about your account</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <strong>💡 Note:</strong> We never sell your personal information to third parties without your explicit consent.
+                    </div>
+                </div>
+
+                <div id="sharing-information">
+                    <h2>Sharing of Information with Third Parties</h2>
+                    
+                    <p>We may share your information in the following limited circumstances:</p>
+                    <ul>
+                        <li>With business partners who help manage our operations</li>
+                        <li>With service providers who process payments and send communications</li>
+                        <li>When required by law or legal process</li>
+                        <li>To protect against fraud or security threats</li>
+                        <li>With successors in case of merger or acquisition</li>
+                    </ul>
+
+                    <h3>Third-Party Partners</h3>
+                    <p>When we share information with partners, they are bound by confidentiality agreements and can only use your information as described in this policy.</p>
+                </div>
+
+                <div id="email-opt-out">
+                    <h2>Email Opt-Out & Communication Preferences</h2>
+                    
+                    <p>You can control how we communicate with you:</p>
+                    <ul>
+                        <li>Click the "Unsubscribe" link in any marketing email</li>
+                        <li>Email us at <a href="mailto:marketing@demandgeniusmedia.com">marketing@demandgeniusmedia.com</a></li>
+                        <li>Update your preferences in your account settings</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <strong>⏱️ Processing Time:</strong> It may take up to 5 business days to process your request. However, we will continue sending transactional messages (like password resets).
+                    </div>
+                </div>
+
+                <div id="third-party-sites">
+                    <h2>Third Party Sites & Links</h2>
+                    
+                    <p>Our website may contain links to third-party websites. Please note:</p>
+                    <ul>
+                        <li>We are not responsible for third-party privacy practices</li>
+                        <li>You should review their privacy policies separately</li>
+                        <li>We are not liable for their content or services</li>
+                        <li>Links do not imply endorsement</li>
+                    </ul>
+
+                    <p>Always verify a website's privacy policy before sharing personal information.</p>
+                </div>
+
+                <div id="policy-updates">
+                    <h2>Updates to This Policy</h2>
+                    
+                    <p>We may update this privacy policy as our practices evolve. When we make material changes:</p>
+                    <ul>
+                        <li>We will notify you of significant changes</li>
+                        <li>We will post an updated version on this page</li>
+                        <li>Your continued use means you accept the changes</li>
+                        <li>Check this page periodically for updates</li>
+                    </ul>
+                </div>
+
+                <div id="jurisdiction">
+                    <h2>Jurisdiction & Legal Compliance</h2>
+                    
+                    <p>This Privacy Policy and Terms of Service are governed by the laws of the United States. By using our website, you:</p>
+                    <ul>
+                        <li>Consent to the collection and use of information as described</li>
+                        <li>Agree to be bound by these terms</li>
+                        <li>Consent to jurisdiction in U.S. courts</li>
+                        <li>Accept our dispute resolution procedures</li>
+                    </ul>
+                </div>
+
+                <!-- LAST UPDATED -->
+                <div class="last-updated">
+                    <strong>Last Updated:</strong> 15 November 2025 at 18:48 UTC<br>
+                    <strong>Version:</strong> 2.0<br>
+                    For questions, contact: <a href="mailto:privacy@demandgeniusmedia.com">privacy@demandgeniusmedia.com</a>
+                </div>
+
+            </article>
+
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             INFO CARDS SECTION
+             ═══════════════════════════════════════════════════════════ -->
+        <section class="terms-info-section">
+            <div class="info-container">
+                <div class="info-header">
+                    <span style="font-size: 1.5rem;">ℹ️</span>
+                    <h3>Your Rights & Our Commitments</h3>
+                </div>
+
+                <div class="info-grid">
+                    <!-- Card 1 -->
+                    <div class="info-card">
+                        <div class="info-card-icon">🔒</div>
+                        <h4>Your Data is Secure</h4>
+                        <p>We use industry-standard encryption and security measures to protect your personal information from unauthorized access.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="info-card">
+                        <div class="info-card-icon">👁️</div>
+                        <h4>Transparency First</h4>
+                        <p>We're transparent about what data we collect, how we use it, and who we share it with. No hidden policies.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="info-card">
+                        <div class="info-card-icon">🚫</div>
+                        <h4>No Spam Promise</h4>
+                        <p>We respect your inbox. You can opt-out of marketing emails anytime, and we won't share your email with spammers.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="info-card">
+                        <div class="info-card-icon">📞</div>
+                        <h4>Easy Contact</h4>
+                        <p>Questions about your privacy? Contact us at privacy@demandgeniusmedia.com and we'll respond within 48 hours.</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="info-card">
+                        <div class="info-card-icon">✅</div>
+                        <h4>Compliance Ready</h4>
+                        <p>We comply with GDPR, CCPA, and other privacy regulations to protect your rights globally.</p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="info-card">
+                        <div class="info-card-icon">🔄</div>
+                        <h4>Regular Updates</h4>
+                        <p>We review and update our privacy practices regularly to ensure they meet the highest standards.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col footer-info">
+                <div class="logo footer-logo">
+                    <a href="index.html">
+                        <img src="Image/LGM_Logo-removebg-preview.png" alt="LGM Logo" class="footer-logo-img">
+                    </a>
+                </div>
+                <p>- DemandGenius Media is a cutting-edge lead generation organization that specializes in B2B research and white papers. Our web platform as a hub for businesses to access valuable insights and information to drive growth and success. <br>
+                - By hosting extensive research reports and white papers, DemandGenius Media is able to provide a wealth of knowledge and resources to its users, helping them stay ahead of the curve in their respective industries.<br> 
+                - With a focus on providing high-quality, actionable information, DemandGenius Media is quickly becoming a go-to source for businesses looking to generate leads and drive their businesses forward.</p>
+                
+                <p class="copyright">&copy; 2025 All rights reserved by DemandGenius Media <br> Design & Develop by <a href="https://www.vrsmleadmag.com/">VRMS LeadMagnet</a></p>
+            </div>
+            
+            <div class="footer-col footer-links-col">
+                <h4>Top Categories</h4>
+                <ul>
+                    <li><a href="ai.html">Artificial Intelligence (AI)</a></li>
+                    <li><a href="categories.html#cyber">Cyber Security</a></li>
+                    <li><a href="categories.html#cloud">Cloud Computing</a></li>
+                    <li><a href="categories.html#biz">Business & Finance</a></li>
+                    <li class="separator"><a href="terms.html">Our Policy & Terms of Use</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col footer-form-col">
+                <h4>Get Updated</h4>
+                <p>Receive our latest reports and market insights directly to your inbox.</p>
+                <form class="footer-contact-form" action="#" method="POST">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="cta-button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

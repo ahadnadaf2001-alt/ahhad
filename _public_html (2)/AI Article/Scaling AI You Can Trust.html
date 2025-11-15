@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Scaling AI You Can Trust - LeadGenOne">
+    <meta property="og:description" content="DemandGenius Media — B2B research, white papers and market insights.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../Image/demo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Scaling AI You Can Trust - LeadGenOne">
+    <meta name="twitter:description" content="DemandGenius Media — B2B research, white papers and market insights.">
+    <meta name="twitter:image" content="../Image/demo.jpg">
+    <meta name="description" content="DemandGenius Media — B2B research, white papers and market insights." />
+    
+    <title>Scaling AI You Can Trust - LeadGenOne</title>
+    <link rel="stylesheet" href="../styles.css"> 
+    
+    <style>
+        /* ═══════════════════════════════════════════════════════════
+           ENHANCED ARTICLE HERO BANNER
+           ═══════════════════════════════════════════════════════════ */
+
+        .article-hero-banner {
+            background: linear-gradient(135deg, #0f1f2e 0%, #1a3a52 50%, #2d5a7b 100%);
+            padding: 4rem 2rem 3rem;
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .article-hero-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(100px, -100px);
+        }
+
+        .article-hero-banner::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(-100px, 50px);
+        }
+
+        .article-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .article-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.75rem;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+            animation: slideInDown 0.6s ease-out;
+        }
+
+        .article-hero-title {
+            color: white;
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 0 0 1rem;
+            letter-spacing: -0.02em;
+            animation: slideInUp 0.8s ease-out 0.1s backwards;
+        }
+
+        .article-hero-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 0 0 1.5rem;
+            font-weight: 400;
+            animation: slideInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .article-hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            animation: slideInUp 0.8s ease-out 0.3s backwards;
+        }
+
+        .article-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+        }
+
+        .article-meta-icon {
+            font-size: 1.25rem;
+            color: #f59e0b;
+        }
+
+        .article-meta-label {
+            font-weight: 600;
+            color: white;
+        }
+
+        .article-meta-value {
+            opacity: 0.9;
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           BREADCRUMB & CTA BAR
+           ═══════════════════════════════════════════════════════════ */
+
+        .article-top-bar {
+            background: var(--surface-color);
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 0;
+        }
+
+        .article-top-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .article-breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            flex-wrap: wrap;
+        }
+
+        .article-breadcrumb a {
+            color: var(--primary-color);
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+
+        .article-breadcrumb a:hover {
+            color: var(--accent-color);
+        }
+
+        .article-share-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            background: var(--border-light);
+            border: 1px solid var(--border-color);
+            padding: 0.6rem 1.2rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-color);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .share-btn:hover {
+            background: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .share-btn:active {
+            transform: translateY(0);
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           ARTICLE CONTENT LAYOUT
+           ═══════════════════════════════════════════════════════════ */
+
+        .article-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .article-main {
+            background: var(--surface-color);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
+            line-height: 1.8;
+        }
+
+        .article-featured-image {
+            margin-bottom: 2rem;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .article-featured-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.35s;
+        }
+
+        .article-main:hover .article-featured-image img {
+            transform: scale(1.02);
+        }
+
+        .article-main h3 {
+            color: var(--primary-dark);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .article-main h3:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .article-main p {
+            color: var(--text-color);
+            line-height: 1.85;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-main ul {
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-main li {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        .article-main b {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           ARTICLE SIDEBAR
+           ═══════════════════════════════════════════════════════════ */
+
+        .article-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .sidebar-card {
+            background: var(--surface-color);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s;
+        }
+
+        .sidebar-card:hover {
+            border-color: var(--accent-color);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .sidebar-card h4 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .sidebar-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           CTA BOX
+           ═══════════════════════════════════════════════════════════ */
+
+        .article-cta-box {
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+        }
+
+        .article-cta-box h4 {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
+        }
+
+        .article-cta-box p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button-box {
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+            width: 100%;
+            text-align: center;
+        }
+
+        .cta-button-box:hover {
+            background: rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           RELATED ARTICLES SECTION
+           ═══════════════════════════════════════════════════════════ */
+
+        .related-articles {
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+            padding: 3rem 2rem;
+            margin-top: 3rem;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .related-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .related-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .related-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .related-card {
+            background: var(--surface-color);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .related-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .related-image {
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .related-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .related-card:hover .related-image img {
+            transform: scale(1.1);
+        }
+
+        .related-content {
+            padding: 1.5rem;
+        }
+
+        .related-category {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+            color: white;
+            font-weight: 700;
+            font-size: 0.7rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.4rem;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .related-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+        }
+
+        .related-date {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           ANIMATIONS
+           ═══════════════════════════════════════════════════════════ */
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           RESPONSIVE DESIGN
+           ═══════════════════════════════════════════════════════════ */
+
+        @media (max-width: 992px) {
+            .article-hero-banner {
+                padding: 3rem 2rem 2rem;
+            }
+
+            .article-hero-title {
+                font-size: 2.2rem;
+            }
+
+            .article-hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .article-container {
+                grid-template-columns: 1fr;
+                padding: 2rem 1.5rem;
+            }
+
+            .article-hero-meta {
+                gap: 1.5rem;
+            }
+
+            .article-top-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .article-hero-banner {
+                padding: 2rem 1rem;
+            }
+
+            .article-hero-title {
+                font-size: 1.6rem;
+            }
+
+            .article-hero-subtitle {
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+            }
+
+            .article-badge {
+                padding: 0.5rem 1rem;
+                font-size: 0.65rem;
+            }
+
+            .article-hero-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .article-meta-item {
+                font-size: 0.85rem;
+            }
+
+            .article-container {
+                padding: 1.5rem 1rem;
+            }
+
+            .article-main {
+                padding: 1.5rem;
+            }
+
+            .article-featured-image {
+                margin-bottom: 1.5rem;
+            }
+
+            .article-main h3 {
+                font-size: 1.2rem;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-hero-banner::before {
+                display: none;
+            }
+
+            .article-hero-banner::after {
+                width: 150px;
+                height: 150px;
+                transform: translate(-60px, 30px);
+            }
+
+            .article-share-buttons {
+                width: 100%;
+            }
+
+            .share-btn {
+                flex: 1;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../Image/LGM_Logo-removebg-preview.png" alt="LGM Logo" class="header-logo-img">
+            </a>
+        </div>
+        
+        <div class="nav-right">
+            <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Toggle Navigation">
+                ☰
+            </button>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../categories.html">Categories</a>
+                <a href="../terms.html">Policy</a>
+            </nav>
+            
+            <button class="search-icon-btn" aria-label="Search">
+                🔍
+            </button>
+        </div>
+    </header>
+
+    <div class="search-dropdown" id="search-dropdown">
+        <div class="search-container-wrapper container">
+            <form class="search-form-full">
+                <input type="search" id="search-input" class="search-input" placeholder="Search our reports and insights..." required>
+                <button type="submit" class="full-search-btn" aria-label="Search">
+                    <span class="search-magnifier">🔍</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        
+        <!-- ═══════════════════════════════════════════════════════════
+             ENHANCED ARTICLE HERO BANNER
+             ═══════════════════════════════════════════════════════════ -->
+        <section class="article-hero-banner">
+            <div class="article-hero-content">
+                <div class="article-badge">
+                    <span>🤖</span>
+                    <span>MACHINE LEARNING</span>
+                </div>
+
+                <h1 class="article-hero-title">Scaling AI You Can Trust</h1>
+
+                <p class="article-hero-subtitle">
+                    Transforming People, Operations and Performance with Responsible AI Models
+                </p>
+
+                <div class="article-hero-meta">
+                    <div class="article-meta-item">
+                        <span class="article-meta-icon">📅</span>
+                        <span class="article-meta-label">Published:</span>
+                        <span class="article-meta-value">November 14, 2025</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <span class="article-meta-icon">⏱️</span>
+                        <span class="article-meta-label">Read Time:</span>
+                        <span class="article-meta-value">8 minutes</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <span class="article-meta-icon">👁️</span>
+                        <span class="article-meta-label">Views:</span>
+                        <span class="article-meta-value">2,456</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             ARTICLE TOP BAR
+             ═══════════════════════════════════════════════════════════ -->
+        <div class="article-top-bar">
+            <div class="article-top-content">
+                <div class="article-breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span>/</span>
+                    <a href="../categories.html">Categories</a>
+                    <span>/</span>
+                    <a href="../ai.html">AI</a>
+                    <span>/</span>
+                    <span>Current Article</span>
+                </div>
+                <div class="article-share-buttons">
+                    <!-- LinkedIn Share Button -->
+                    <a class="share-btn" id="linkedin-share" title="Share on LinkedIn" target="_blank" rel="noopener noreferrer">
+                        💼 LinkedIn
+                    </a>
+                    
+                    <!-- Twitter Share Button -->
+                    <a class="share-btn" id="twitter-share" title="Share on Twitter" target="_blank" rel="noopener noreferrer">
+                        𝕏 Twitter
+                    </a>
+                    
+                    <!-- Copy Link Button -->
+                    <button class="share-btn" id="copy-link-btn" title="Copy Link to Clipboard">
+                        📋 Copy
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             ARTICLE CONTENT
+             ═══════════════════════════════════════════════════════════ -->
+        <div class="article-container">
+            
+            <!-- MAIN ARTICLE CONTENT -->
+            <article class="article-main">
+                
+                <div class="article-featured-image">
+                    <img src="../Image/demo.jpg" alt="Banner image for Scaling AI You Can Trust">
+                </div>
+
+                <section>
+                    <h3>Event Overview</h3>
+                    <p>In a rapidly evolving digital landscape, CIOs are under increasing pressure to unlock AI's full potential, while navigating the complexities of secure data, regulatory compliance and scalable architectures. Understanding AI isn't just about technology; it's about reimagining how the enterprise operates, makes decisions and delivers value. To stay ahead, CIOs must move beyond buzzwords and develop a clear, actionable view of AI's capabilities, risks and long-term impact on the business.</p>
+                    
+                    <p>At this exclusive roundtable, hosted by Intelligent CIO Middle East and powered by Kyndryl, senior technology leaders will come together to explore:</p>
+                
+                    <ul>
+                        <li><b>Agentic AI frameworks</b>: How emerging models are reshaping autonomy, decision-making and enterprise efficiency especially in high-stakes or regulated environments.</li>
+                    
+                        <li><b>Data-secure resilience</b>: Strategies to strengthen infrastructure, ensure privacy and future-proof the data ecosystem.</li>
+                    
+                        <li><b>Regulatory readiness</b>: What upcoming AI regulations mean for CIOs and how to stay ahead without slowing innovation.</li>
+                    </ul>
+                    
+                    <p>As a global leader in IT infrastructure and transformation services, Kyndryl can credibly speak to secure deployment, data management and operational resilience for enterprise AI. By integrating AI across infrastructure, applications, and workflows, Kyndryl empowers enterprises to move from reactive to predictive operations, delivering greater agility, efficiency, and innovation.</p>
+                    
+                    <h3>What to Expect</h3>
+                    
+                    <ul>
+                        <li>Start the day with a networking breakfast before the discussion begins</li>
+                        <li>Insights into the evolving role of AI in IT modernisation</li>
+                        <li>Practical approach to AI integration and governance</li>
+                        <li>Peer-to-peer discussion with CIOs, CTOs and Digital Transformation leaders</li>
+                    </ul>
+                    
+                    <p>The question is no longer if to adopt AI, but how to scale it responsibly.</p>
+                    
+                    <p>This closed-door session will provide a collaborative forum to exchange insights with peers, benchmark your AI journey and shape the standards for enterprise AI adoption.</p>
+                    
+                    <h3>Get Involved</h3>
+                    
+                    <p><b>Interested in taking part in this discussion? To find out more, reach out to <a href="mailto:eventsteam@lynchpinmedia.com">eventsteam@lynchpinmedia.com</a> and secure your place at the table.</b></p>
+                    
+                </section>
+
+            </article>
+
+            <!-- SIDEBAR -->
+            <aside class="article-sidebar">
+                
+                <!-- CTA BOX -->
+                <div class="article-cta-box">
+                    <h4>📥 Register For Event</h4>
+                    
+                    <b>Location</b><p>VOCO Hotel Dubai<br>10am - 12pm</p>
+                    <b>Organizer</b><p>Lynchpin Media</p>
+                    <b>Date</b><p>16th October</p>
+                    <button class="cta-button-box">Download Now</button>
+                </div>
+
+                <!-- RELATED INFO BOX -->
+                <div class="sidebar-card">
+                    <h4>📊 Quick Stats</h4>
+                    <p>
+                        <strong>Pages:</strong> 45<br>
+                        <strong>Format:</strong> PDF<br>
+                        <strong>Level:</strong> Executive<br>
+                        <strong>Published:</strong> Nov 2025
+                    </p>
+                </div>
+
+
+                <!-- CATEGORY BOX -->
+                <div class="sidebar-card">
+                    <h4>📂 Category</h4>
+                    <p>
+                        🤖 <strong>Artificial Intelligence</strong><br>
+                        ⚙️ Machine Learning<br>
+                        🔧 Automation & Integration
+                    </p>
+                </div>
+
+            </aside>
+
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             RELATED ARTICLES SECTION
+             ═══════════════════════════════════════════════════════════ -->
+        <section class="related-articles">
+            <div class="related-container">
+                <div class="related-header">
+                    <span style="font-size: 1.5rem;">🔗</span>
+                    <h3>Related Articles You Might Like</h3>
+                </div>
+
+                <div class="related-grid">
+                    <!-- Related 1 -->
+                    <a href="../ai.html" class="related-card">
+                        <div class="related-image">
+                            <img src="../Image/demo.jpg" alt="RPA vs Cognitive Automation">
+                        </div>
+                        <div class="related-content">
+                            <span class="related-category">⚙️ Automation</span>
+                            <h4 class="related-title">RPA vs. Cognitive Automation</h4>
+                            <p class="related-date">📅 Oct 05, 2025</p>
+                        </div>
+                    </a>
+
+                    <!-- Related 2 -->
+                    <a href="../ai.html" class="related-card">
+                        <div class="related-image">
+                            <img src="../Image/demo.jpg" alt="Generative AI in Web Development">
+                        </div>
+                        <div class="related-content">
+                            <span class="related-category">💻 Development</span>
+                            <h4 class="related-title">The Future of Code: Generative AI</h4>
+                            <p class="related-date">📅 Sep 20, 2025</p>
+                        </div>
+                    </a>
+
+                    <!-- Related 3 -->
+                    <a href="../categories.html" class="related-card">
+                        <div class="related-image">
+                            <img src="../Image/demo.jpg" alt="Cloud Migration Guide">
+                        </div>
+                        <div class="related-content">
+                            <span class="related-category">☁️ Cloud</span>
+                            <h4 class="related-title">Cloud Migration Strategy Guide</h4>
+                            <p class="related-date">📅 Sep 01, 2025</p>
+                        </div>
+                    </a>
+
+                    <!-- Related 4 -->
+                    <a href="../categories.html" class="related-card">
+                        <div class="related-image">
+                            <img src="../Image/demo.jpg" alt="Cyber Security 2025">
+                        </div>
+                        <div class="related-content">
+                            <span class="related-category">🔒 Security</span>
+                            <h4 class="related-title">State of Cyber Security 2025</h4>
+                            <p class="related-date">📅 Oct 28, 2025</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col footer-info">
+                <div class="logo footer-logo">
+                    <a href="../index.html">
+                        <img src="../Image/LGM_Logo-removebg-preview.png" alt="LGM Logo" class="footer-logo-img">
+                    </a>
+                </div>
+                <p>- DemandGenius Media is a cutting-edge lead generation organization that specializes in B2B research and white papers. Our web platform as a hub for businesses to access valuable insights and information to drive growth and success. <br>
+                - By hosting extensive research reports and white papers, DemandGenius Media is able to provide a wealth of knowledge and resources to its users, helping them stay ahead of the curve in their respective industries.<br> 
+                - With a focus on providing high-quality, actionable information, DemandGenius Media is quickly becoming a go-to source for businesses looking to generate leads and drive their businesses forward.</p>
+                
+                <p class="copyright">&copy; 2025 All rights reserved by DemandGenius Media <br> Design & Develop by <a href="https://www.vrsmleadmag.com/">VRMS LeadMagnet</a></p>
+            </div>
+            
+            <div class="footer-col footer-links-col">
+                <h4>Top Categories</h4>
+                <ul>
+                    <li><a href="../ai.html">Artificial Intelligence (AI)</a></li>
+                    <li><a href="../categories.html#cyber">Cyber Security</a></li>
+                    <li><a href="../categories.html#cloud">Cloud Computing</a></li>
+                    <li><a href="../categories.html#biz">Business & Finance</a></li>
+                    <li class="separator"><a href="../terms.html">Privacy Policy & Terms of Use</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col footer-form-col">
+                <h4>Get Updated</h4>
+                <p>Receive our latest reports and market insights directly to your inbox.</p>
+                <form class="footer-contact-form" action="#" method="POST">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="cta-button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SHARE FUNCTIONALITY SCRIPT
+         ═══════════════════════════════════════════════════════════ -->
+    <script>
+        // Get article information
+        const articleTitle = "Scaling AI You Can Trust";
+        const articleUrl = window.location.href;
+        const articleDescription = "Transforming People, Operations and Performance with Responsible AI Models";
+
+        // LinkedIn Share
+        const linkedinBtn = document.getElementById('linkedin-share');
+        linkedinBtn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(articleUrl)}`;
+
+        // Twitter Share
+        const twitterBtn = document.getElementById('twitter-share');
+        twitterBtn.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(articleTitle)}&url=${encodeURIComponent(articleUrl)}&via=DemandGeniusMedia`;
+
+        // Copy Link to Clipboard
+        const copyBtn = document.getElementById('copy-link-btn');
+        copyBtn.addEventListener('click', function() {
+            // Copy to clipboard
+            navigator.clipboard.writeText(articleUrl).then(() => {
+                // Change button text temporarily
+                const originalText = copyBtn.textContent;
+                copyBtn.textContent = '✓ Copied!';
+                copyBtn.style.background = 'var(--success-color)';
+                
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    copyBtn.textContent = originalText;
+                    copyBtn.style.background = '';
+                }, 2000);
+            }).catch(() => {
+                // Fallback for older browsers
+                const textarea = document.createElement('textarea');
+                textarea.value = articleUrl;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                
+                copyBtn.textContent = '✓ Copied!';
+                setTimeout(() => {
+                    copyBtn.textContent = '📋 Copy';
+                }, 2000);
+            });
+        });
+    </script>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Complete Your Download - DemandGenius Media">
+    <meta property="og:description" content="Final step to download the AI Leadership Guide">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../../Image/demo.jpg">
+    <meta name="description" content="Complete your form to download the AI Leadership Guide." />
+    
+    <title>Complete Your Download - DemandGenius Media</title>
+    <link rel="stylesheet" href="../../styles.css">
+    
+    <style>
+        /* ═══════════════════════════════════════════════════════════
+           HERO SECTION
+           ═══════════════════════════════════════════════════════════ */
+
+        .download-hero {
+            background: linear-gradient(135deg, #0f1f2e 0%, #1a3a52 50%, #2d5a7b 100%);
+            padding: 3rem 2rem;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .download-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(100px, -100px);
+        }
+
+        .download-hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(-100px, 50px);
+        }
+
+        .download-hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .download-hero h1 {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0 0 1rem;
+            line-height: 1.2;
+        }
+
+        .download-hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           MAIN CONTAINER
+           ═══════════════════════════════════════════════════════════ */
+
+        .download-container {
+            max-width: 700px;
+            margin: 0 auto 4rem;
+            padding: 0 2rem;
+        }
+
+        .form-card {
+            background: var(--surface-color);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+        }
+
+        .form-title {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           FORM GROUPS
+           ═══════════════════════════════════════════════════════════ */
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--primary-dark);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--border-color);
+            border-radius: 0.5rem;
+            background: white;
+            color: var(--text-color);
+            font-size: 0.95rem;
+            font-family: var(--font-sans);
+            transition: all var(--transition-fast);
+            cursor: pointer;
+        }
+
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+        }
+
+        .form-group select option {
+            padding: 0.5rem;
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           CHECKBOX GROUP
+           ═══════════════════════════════════════════════════════════ */
+
+        .checkbox-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .checkbox-group > label {
+            display: block;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .checkbox-group small {
+            display: block;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            cursor: pointer;
+            accent-color: var(--accent-color);
+            flex-shrink: 0;
+        }
+
+        .checkbox-item label {
+            margin: 0;
+            font-weight: 500;
+            color: var(--text-color);
+            line-height: 1.5;
+            cursor: pointer;
+        }
+
+        /* Checkbox grid layout */
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .checkbox-grid .checkbox-item {
+            margin-bottom: 0;
+        }
+
+        .checkbox-grid .checkbox-item label {
+            font-size: 0.9rem;
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           LEGAL TEXT
+           ═══════════════════════════════════════════════════════════ */
+
+        .legal-section {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(245, 158, 11, 0.03) 100%);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border-left: 4px solid var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-section h4 {
+            color: var(--primary-dark);
+            margin: 0 0 1rem;
+            font-size: 1rem;
+        }
+
+        .legal-section p {
+            color: var(--text-color);
+            font-size: 0.85rem;
+            line-height: 1.7;
+            margin: 0 0 0.75rem;
+        }
+
+        .legal-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-section a {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           FORM BUTTONS
+           ═══════════════════════════════════════════════════════════ */
+
+        .form-button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn-back {
+            flex: 1;
+            padding: 1rem;
+            border: 2px solid var(--border-color);
+            background: white;
+            color: var(--text-color);
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all var(--transition-fast);
+        }
+
+        .btn-back:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-download {
+            flex: 1;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all var(--transition-fast);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+        }
+
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.35);
+        }
+
+        .btn-download:active {
+            transform: translateY(0);
+        }
+
+        .btn-download:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           SUCCESS OVERLAY
+           ═══════════════════════════════════════════════════════════ */
+
+        .success-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .success-overlay.show {
+            display: flex;
+        }
+
+        .success-message {
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(245, 158, 11, 0.3);
+            max-width: 500px;
+            animation: slideInUp 0.5s ease-out;
+        }
+
+        .success-message h3 {
+            color: white;
+            margin: 0 0 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .success-message .success-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .success-message p {
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        /* ═══════════════════════════════════════════════════════════
+           RESPONSIVE DESIGN
+           ═══════════════════════════════════════════════════════════ */
+
+        @media (max-width: 992px) {
+            .download-hero {
+                padding: 2rem 2rem;
+            }
+
+            .download-hero h1 {
+                font-size: 2rem;
+            }
+
+            .form-card {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .download-hero {
+                padding: 1.5rem 1rem;
+            }
+
+            .download-hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .download-hero p {
+                font-size: 0.9rem;
+            }
+
+            .download-container {
+                padding: 0 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .form-card {
+                padding: 1.5rem;
+            }
+
+            .checkbox-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-button-group {
+                flex-direction: column;
+            }
+
+            .btn-back, .btn-download {
+                width: 100%;
+            }
+
+            .legal-section {
+                padding: 1rem;
+                font-size: 0.8rem;
+            }
+
+            .legal-section p {
+                font-size: 0.8rem;
+                line-height: 1.6;
+            }
+
+            .download-hero::before {
+                display: none;
+            }
+
+            .download-hero::after {
+                width: 150px;
+                height: 150px;
+                transform: translate(-60px, 20px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="../../index.html">
+                <img src="../../Image/LGM_Logo-removebg-preview.png" alt="LGM Logo" class="header-logo-img">
+            </a>
+        </div>
+        
+        <div class="nav-right">
+            <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Toggle Navigation">
+                ☰
+            </button>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="../../categories.html">Categories</a>
+                <a href="../../terms.html">Policy</a>
+            </nav>
+            
+            <button class="search-icon-btn" aria-label="Search">
+                🔍
+            </button>
+        </div>
+    </header>
+
+    <div class="search-dropdown" id="search-dropdown">
+        <div class="search-container-wrapper container">
+            <form class="search-form-full">
+                <input type="search" id="search-input" class="search-input" placeholder="Search our reports and insights..." required>
+                <button type="submit" class="full-search-btn" aria-label="Search">
+                    <span class="search-magnifier">🔍</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        
+        <!-- HERO SECTION -->
+        <section class="download-hero">
+            <div class="download-hero-content">
+                <h1>Complete Your Download</h1>
+                <p>Answer a few quick questions to get your AI Leadership Guide</p>
+            </div>
+        </section>
+
+        <!-- FORM CONTAINER -->
+        <div class="download-container">
+            <div class="form-card">
+                <h2 class="form-title">📋 Provide the following to download:</h2>
+                
+                <form id="lead-form-step2">
+                    
+                    <!-- Question 1: Timeline -->
+                    <div class="form-group">
+                        <label for="timeline"><strong>When is your company planning to evaluate Accounting/ERP software solutions?</strong></label>
+                        <select id="timeline" name="timeline" required>
+                            <option value="">--- Select One ---</option>
+                            <option value="Immediately">Immediately (Next 3 months)</option>
+                            <option value="Short-term">Short-term (3-6 months)</option>
+                            <option value="Medium-term">Medium-term (6-12 months)</option>
+                            <option value="Long-term">Long-term (12+ months)</option>
+                            <option value="Not Sure">Not Sure</option>
+                        </select>
+                    </div>
+
+                    <!-- Question 2: Current ERP/Accounting Systems -->
+                    <div class="checkbox-group">
+                        <label><strong>What Accounting/ERP system are you currently running on?</strong></label>
+                        <small>(accepting all options)</small>
+                        
+                        <div class="checkbox-grid">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="acumatica" name="solutions" value="Acumatica">
+                                <label for="acumatica">Acumatica</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="deltek" name="solutions" value="Deltek">
+                                <label for="deltek">Deltek</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="epicor" name="solutions" value="Epicor">
+                                <label for="epicor">Epicor</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="financialforce" name="solutions" value="FinancialForce">
+                                <label for="financialforce">FinancialForce</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="infor" name="solutions" value="Infor">
+                                <label for="infor">Infor</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="intacct" name="solutions" value="Intacct">
+                                <label for="intacct">Intacct</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="dynamics" name="solutions" value="Microsoft Dynamics">
+                                <label for="dynamics">Microsoft Dynamics</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="quickbooks" name="solutions" value="Quickbooks">
+                                <label for="quickbooks">Quickbooks</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="sage" name="solutions" value="Sage">
+                                <label for="sage">Sage</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="sap" name="solutions" value="SAP">
+                                <label for="sap">SAP</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="workday" name="solutions" value="Workday">
+                                <label for="workday">Workday</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="other-erp" name="solutions" value="Other">
+                                <label for="other-erp">Other</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 3: Primary Use Case -->
+                    <div class="form-group">
+                        <label for="usecase"><strong>What is your primary use case for AI?</strong></label>
+                        <select id="usecase" name="usecase" required>
+                            <option value="">--- Select One ---</option>
+                            <option value="Customer Service">Customer Service & Support</option>
+                            <option value="Content Generation">Content Generation</option>
+                            <option value="Data Analysis">Data Analysis & Insights</option>
+                            <option value="Process Automation">Process Automation</option>
+                            <option value="Decision Making">Decision Making & Strategy</option>
+                            <option value="Product Development">Product Development</option>
+                            <option value="HR & Recruitment">HR & Recruitment</option>
+                            <option value="Not Sure Yet">Not Sure Yet</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Question 4: Organizational Readiness -->
+                    <div class="form-group">
+                        <label for="readiness"><strong>How prepared is your organization for AI adoption?</strong></label>
+                        <select id="readiness" name="readiness" required>
+                            <option value="">--- Select One ---</option>
+                            <option value="Very Prepared">Very Prepared</option>
+                            <option value="Somewhat Prepared">Somewhat Prepared</option>
+                            <option value="Neutral">Neutral</option>
+                            <option value="Need Development">Need Development</option>
+                            <option value="Not Prepared">Not Prepared</option>
+                        </select>
+                    </div>
+
+                    <!-- Marketing Checkbox -->
+                    <div class="checkbox-item" style="margin-bottom: 1.5rem;">
+                        <input 
+                            type="checkbox" 
+                            id="marketing-consent" 
+                            name="marketingConsent"
+                        >
+                        <label for="marketing-consent">
+                            <strong>Yes, send me marketing communications</strong> about Oracle Products, Services and Events
+                        </label>
+                    </div>
+
+                    <!-- Legal Section -->
+                    <div class="legal-section">
+                        <h4>📋 Privacy & Data Usage</h4>
+                        <p>
+                            <strong>By filling and submitting this form you understand and agree</strong> that the use of DemandGenius Media's website is subject to our <a href="../../terms.html" target="_blank">Terms of Use</a>.
+                        </p>
+                        <p>
+                            Additional details regarding DemandGenius Media's collection and use of your personal information, including information about access, retention, rectification, deletion, security, cross-border transfers and other topics, is available in the <a href="../../terms.html" target="_blank">DemandGenius Media Privacy Policy</a>.
+                        </p>
+                        <p style="margin-top: 1rem; font-size: 0.82rem;">
+                            <strong>This is cohosted by DemandGenius Media and the vendor. Both companies will process your personal information. Each party will be responsible for managing their own use of your personal information.</strong> By filling and submitting this form you understand and agree that DemandGenius Media processes your personal information in accordance with the <a href="../../terms.html" target="_blank">DemandGenius Media Privacy Policy</a>. Additional details regarding DemandGenius Media's collection and use of your personal information, including information about access, retention, rectification, deletion, security, cross-border transfers and other topics, is available in the <a href="../../terms.html" target="_blank">Privacy Policy</a>.
+                        </p>
+                    </div>
+
+                    <!-- Terms Checkbox -->
+                    <div class="checkbox-item" style="margin-bottom: 1.5rem;">
+                        <input 
+                            type="checkbox" 
+                            id="terms-agreement" 
+                            name="termsAgreement"
+                            required
+                        >
+                        <label for="terms-agreement">
+                            <strong>By filling and submitting this form you understand and agree that the use of DemandGenius Media's website is subject to our <a href="../../terms.html" target="_blank" style="color: var(--accent-color); font-weight: 600;">Terms of Use</a></strong>
+                        </label>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="form-button-group">
+                        <button type="button" class="btn-back" onclick="goBack()">← Back</button>
+                        <button type="submit" class="btn-download">📥 Download Now</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col footer-info">
+                <div class="logo footer-logo">
+                    <a href="../../index.html">
+                        <img src="../../Image/LGM_Logo-removebg-preview.png" alt="LGM Logo" class="footer-logo-img">
+                    </a>
+                </div>
+                <p>- DemandGenius Media is a cutting-edge lead generation organization that specializes in B2B research and white papers. Our web platform as a hub for businesses to access valuable insights and information to drive growth and success. <br>
+                - By hosting extensive research reports and white papers, DemandGenius Media is able to provide a wealth of knowledge and resources to its users, helping them stay ahead of the curve in their respective industries.<br> 
+                - With a focus on providing high-quality, actionable information, DemandGenius Media is quickly becoming a go-to source for businesses looking to generate leads and drive their businesses forward.</p>
+                
+                <p class="copyright">&copy; 2025 All rights reserved by DemandGenius Media <br> Design & Develop by <a href="https://www.vrsmleadmag.com/">VRMS LeadMagnet</a></p>
+            </div>
+            
+            <div class="footer-col footer-links-col">
+                <h4>Top Categories</h4>
+                <ul>
+                    <li><a href="../../ai.html">Artificial Intelligence (AI)</a></li>
+                    <li><a href="../../categories.html#cyber">Cyber Security</a></li>
+                    <li><a href="../../categories.html#cloud">Cloud Computing</a></li>
+                    <li><a href="../../categories.html#biz">Business & Finance</a></li>
+                    <li class="separator"><a href="../../terms.html">Privacy Policy</a></li>
+                    <li><a href="../../terms.html">Terms of Use</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col footer-form-col">
+                <h4>Get Updated</h4>
+                <p>Receive our latest reports and market insights directly to your inbox.</p>
+                <form class="footer-contact-form" action="#" method="POST">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="cta-button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Overlay -->
+    <div class="success-overlay" id="successOverlay">
+        <div class="success-message">
+            <div class="success-icon">✓</div>
+            <h3>Download Started!</h3>
+            <p>Your AI Leadership Guide is downloading now.</p>
+            <p style="font-size: 0.9rem; margin-top: 1rem;">Check your email for additional resources and insights.</p>
+        </div>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script src="download-handler.js"></script>
+</body>
+</html>
